@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="h-screen">
-      <RouterProvider router={router} />
+      <RouterProvider basename="/notes-webapp/" router={router} />
     </div>
   );
 }
