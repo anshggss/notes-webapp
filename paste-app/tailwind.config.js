@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      scrollbar: {
+        none: {
+          "scrollbar-width": "none",
+          "-ms-overflow-style": "none",
+        },
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography'),],
 }

@@ -16,7 +16,7 @@ export const pasteSlice = createSlice({
       
     },
     removeFromPaste(state,action) {
-      
+      state.pastes = state.pastes.filter((paste) => paste.title !== action.payload.title);
     },
     resetAllPastes: (state) => {
       state.pastes = [];

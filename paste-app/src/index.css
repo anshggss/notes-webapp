@@ -18,3 +18,51 @@ body{
     max-width: 100%;
     background-color: #171717;
 }
+
+/* Hide the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide the scrollbar for Firefox */
+.no-scrollbar {
+    scrollbar-width: none;
+}
+
+/* Hide the scrollbar for Internet Explorer */
+.no-scrollbar {
+    -ms-overflow-style: none;
+}
+
+  @keyframes cancel {
+      0% {
+          
+      }
+
+      20% {
+          transform: rotate(10deg);
+      }
+
+
+      40% {
+        transform: rotate(-10deg);
+      }
+
+      60% {
+        transform: rotate(10deg);
+      }
+
+
+      80% {
+        transform: rotate(-10deg);
+      }
+
+
+      100% {
+        transform: rotate(10deg);
+      }
+  }
+
+  .animate-cancel:hover {
+      animation: cancel .5s;
+  }

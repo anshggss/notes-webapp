@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const pastesPage = () => {
   return (
-    <div>
-      pastes
+    <div className="text-white" style={{ fontFamily: "Ubuntu" }}>
+      Pastes
     </div>
-  )
-}
+  );
+};
 
-export default pastesPage
+export default pastesPage;
