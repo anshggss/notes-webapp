@@ -19,15 +19,21 @@ const viewPaste = (props) => {
       return;
     }
     dispatch(updateToPaste({ title, content, id }));
-    toast("Paste Updated!!!");
+    toast("Paste Updated!!! Go to Home", {
+      style: {
+        backgroundColor: "green",
+        color: "white",
+        fontFamily: "Ubuntu",
+      },
+    });
   };
 
   return (
-    <div className="flex-grow flex flex-col h-auto gap-2 bg-[#3C3D37] items-center">
+    <div className="flex-grow flex flex-col h-auto gap-2 bg-[#fff] items-center">
       <div className="flex flex-row w-full justify-center h-[575px] p-4 rounded-lg gap-4">
-        <div className="flex flex-col w-1/2 gap-1 bg-[#543A14] p-3 rounded-md">
+        <div className="flex flex-col w-1/2 gap-1 bg-[#242322] p-3 rounded-lg">
           <input
-            className="outline-none text-black w-full p-2 rounded-md font-mono my-1 prose-base"
+            className="outline-none text-black w-full p-2 rounded-lg font-mono my-1 prose-base"
             type="text"
             value={title}
             placeholder="Title"
@@ -35,7 +41,7 @@ const viewPaste = (props) => {
             style={{ fontFamily: "Ubuntu", letterSpacing: "1px" }}
           />
           <textarea
-            className="resize-none bg-[#F0BB78] rounded-md w-full text-black p-2 font-mono prose-base outline-none pretty-scroll overflow-auto h-full"
+            className="resize-none bg-[#3b3a38] rounded-lg w-full text-white p-2 font-mono prose-base outline-none pretty-scroll overflow-auto h-full"
             placeholder="Paste your Notes here..."
             value={content}
             onChange={(e) => setContent(e.target.value)}
@@ -44,7 +50,7 @@ const viewPaste = (props) => {
         </div>
         <div className="flex top-2 left-80 w-28 h-fit rounded">
           <button
-            className="w-full h-12 bg-[#ECDFCC] rounded my-1 hover:bg-red-800 transition-all duration-200 flex justify-center items-center"
+            className="w-full h-12 bg-[#ECDFCC] rounded-lg my-1 hover:bg-neutral-900 hover:text-white transition-all duration-200 flex justify-center items-center"
             onClick={handleUpdate}
           >
             Update Paste
