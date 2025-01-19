@@ -20,12 +20,6 @@ const viewPaste = (props) => {
     }
     dispatch(updateToPaste({ title, content, id }));
     toast("Paste Updated!!!");
-    setTimeout(() => {
-      toast("Redirecting to Home Page");
-    }, 2000);
-    setTimeout(() => {
-      window.location.href = "/notes-webapp/";
-    }, 2500);
   };
 
   return (
