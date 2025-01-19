@@ -4,6 +4,7 @@ import Pastes from "./components/pastesPage";
 import NavBar from "./components/navBar";
 import ViewPaste from "./components/viewPaste";
 import PasteCard from "./pasteCard/pasteCard";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter(
   [
@@ -31,10 +32,10 @@ const router = createBrowserRouter(
     {
       path: "/pastes/:id",
       element: (
-        <div>
+        <>
           <NavBar />
           <ViewPaste />
-        </div>
+        </>
       ),
     },
   ],
@@ -47,6 +48,13 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Toaster
+        containerStyle={{
+          position: "absolute",
+          bottom: 20,
+          right: 20,
+        }}
+      />
     </>
   );
 }

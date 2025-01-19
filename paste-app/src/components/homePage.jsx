@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToPaste, resetAllPastes } from "../redux-slices/PASTEslice";
 import PasteCard from "../pasteCard/pasteCard";
-import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import "boxicons";
+import toast, { Toaster } from "react-hot-toast";
 
 const homePage = () => {
   const [title, setTitle] = useState("");
@@ -20,6 +20,7 @@ const homePage = () => {
       dispatch(addToPaste({ title, content }));
       setTitle("");
       setContent("");
+      toast("hehheehehehe");
     }
   };
 

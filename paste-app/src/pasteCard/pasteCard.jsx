@@ -9,7 +9,7 @@ import {
 const pasteCard = (props) => {
   const dispatch = useDispatch();
   const handleEdit = () => {
-    alert("We're working on that feature right now!!!");
+    window.location.href = `/notes-webapp/pastes/${props.id}`;
   };
 
   const handleDelete = () => {
