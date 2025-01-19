@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "./app/store";
 
 createRoot(document.getElementById("root")).render(
-  <Provider className="h-full" store={store}>
+  <Provider basename="/notes-webapp" className="h-full" store={store}>
     <App className="h-full" />
   </Provider>
 );

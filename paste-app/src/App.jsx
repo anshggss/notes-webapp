@@ -5,40 +5,45 @@ import NavBar from "./components/navBar";
 import ViewPaste from "./components/viewPaste";
 import PasteCard from "./pasteCard/pasteCard";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: (
+        <div className="h-full flex flex-col">
+          <NavBar />
+          <Home />
+        </div>
+      ),
+    },
+    {
+      path: "/pastes",
+      element: (
+        <div>
+          <NavBar />
+          <Pastes />
+        </div>
+      ),
+    },
+    {
+      path: "/pastes/:id",
+      element: (
+        <div>
+          <NavBar />
+          <ViewPaste />
+        </div>
+      ),
+    },
+  ],
   {
-    path: "/",
-    element: (
-      <div className="h-full flex flex-col">
-        <NavBar />
-        <Home />
-      </div>
-    ),
-  },
-  {
-    path: "/pastes",
-    element: (
-      <div>
-        <NavBar />
-        <Pastes />
-      </div>
-    ),
-  },
-  {
-    path: "/pastes/:id",
-    element: (
-      <div>
-        <NavBar />
-        <ViewPaste />
-      </div>
-    ),
-  },
-]);
+    basename: "/notes-webapp/",
+  }
+);
 
 function App() {
   return (
     <div className="h-screen">
-      <RouterProvider basename="/notes-webapp/" router={router} />
+      <RouterProvider router={router} />
     </div>
   );
 }
