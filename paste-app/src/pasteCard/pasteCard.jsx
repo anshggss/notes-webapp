@@ -5,6 +5,7 @@ import {
   resetAllPastes,
   removeFromPaste,
 } from "../redux-slices/PASTEslice";
+import { NavLink } from "react-router-dom";
 
 const pasteCard = (props) => {
   const dispatch = useDispatch();
@@ -25,9 +26,9 @@ const pasteCard = (props) => {
         <p className="prose-sm">{props.content}</p>
       </div>
       <div className="font-mono flex gap-4" style={{ fontFamily: "Ubuntu" }}>
-        <button className="prose-base" onClick={handleEdit}>
+        <NavLink className={"prose-base"} to={`/pastes/${props.id}`}>
           Edit
-        </button>
+        </NavLink>
         <button className="prose-base" onClick={handleDelete}>
           Delete
         </button>
