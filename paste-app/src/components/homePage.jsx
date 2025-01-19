@@ -5,7 +5,6 @@ import PasteCard from "../pasteCard/pasteCard";
 import "simplebar-react/dist/simplebar.min.css";
 import "boxicons";
 import toast, { Toaster } from "react-hot-toast";
-import "../css/homePage.css";
 
 const homePage = () => {
   const [title, setTitle] = useState("");
