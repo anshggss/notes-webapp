@@ -17,7 +17,7 @@ const navBar = () => {
         className="font-mono flex hover:text-[#fff] h-full p-4 justify-center items-center hover:bg-[#000] transition-all duration-200 prose-xl text-[#181C14]"
         style={{ fontFamily: "Ubuntu", letterSpacing: "1px" }}
       >
-        Pastes
+        Notes
       </NavLink>
     </div>
   );

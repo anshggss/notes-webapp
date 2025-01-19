@@ -109,7 +109,7 @@ const homePage = () => {
               className="text-[#fff] font-mono p-2 prose-2xl"
               style={{ fontFamily: "Ubuntu", letterSpacing: "1px" }}
             >
-              Previous Pastes
+              Previous Notes
             </h1>
             <div className="flex flex-col w-full gap-4 bg-[#242322] p-4 rounded-lg">
               {pastes.length > 0 ? (
@@ -119,7 +119,7 @@ const homePage = () => {
                   className="text-[#fff] font-mono p-2 prose-sm"
                   style={{ fontFamily: "Ubuntu", letterSpacing: "1px" }}
                 >
-                  No Pastes to show
+                  No notes to show
                 </h1>
               )}
             </div>
