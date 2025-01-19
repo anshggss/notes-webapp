@@ -16,22 +16,7 @@ body{
 #root{
     min-height: 100vh;
     max-width: 100%;
-    background-color: #171717;
-}
-
-/* Hide the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide the scrollbar for Firefox */
-.no-scrollbar {
-    scrollbar-width: none;
-}
-
-/* Hide the scrollbar for Internet Explorer */
-.no-scrollbar {
-    -ms-overflow-style: none;
+    background-color: #3C3D37;
 }
 
   @keyframes cancel {
@@ -65,4 +50,14 @@ body{
 
   .animate-cancel:hover {
       animation: cancel .5s;
+  }
+
+  .pretty-scroll::-webkit-scrollbar{
+    width: 5px;
+    
+  }
+
+  .pretty-scroll::-webkit-scrollbar-track{
+    background: #171717 ;
+    border-radius: 2px;
   }

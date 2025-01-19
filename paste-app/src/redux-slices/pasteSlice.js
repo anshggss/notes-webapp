@@ -9,6 +9,7 @@ export const pasteSlice = createSlice({
   initialState,
   reducers: {
     addToPaste: (state,action) => {
+      action.payload["id"] = state.pastes.length;
       state.pastes = [...state.pastes, action.payload]
       localStorage.setItem('pastes', JSON.stringify(state.pastes))
     },
