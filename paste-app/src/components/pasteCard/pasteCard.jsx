@@ -4,8 +4,9 @@ import {
   addToPaste,
   resetAllPastes,
   removeFromPaste,
-} from "../redux-slices/PASTEslice";
+} from "../../redux-slices/pasteSlice";
 import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const pasteCard = (props) => {
   const dispatch = useDispatch();
@@ -15,6 +16,13 @@ const pasteCard = (props) => {
 
   const handleDelete = () => {
     dispatch(removeFromPaste({ title: props.title }));
+    toast("Note Deleted!", {
+      style: {
+        backgroundColor: "orange",
+        color: "white",
+        fontFamily: "Ubuntu",
+      },
+    });
   };
   return (
     <div className="w-full flex justify-between items-center p-4 gap-4 bg-[#3b3a38] rounded-md">
@@ -28,7 +36,7 @@ const pasteCard = (props) => {
       <div className="font-mono flex gap-4" style={{ fontFamily: "Ubuntu" }}>
         <NavLink
           className={
-            "prose-base text-white hover:text-orange-600 transition-all duration-200"
+            "prose-base text-white hover:text-yellow-400 transition-all duration-200"
           }
           to={`/pastes/${props.id}`}
         >

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToPaste, resetAllPastes } from "../redux-slices/PASTEslice";
-import PasteCard from "../pasteCard/pasteCard";
+import { addToPaste, resetAllPastes } from "../redux-slices/pasteSlice";
+import PasteCard from "./pasteCard/pasteCard";
 import "simplebar-react/dist/simplebar.min.css";
 import "boxicons";
 import toast, { Toaster } from "react-hot-toast";
@@ -34,7 +34,7 @@ const homePage = () => {
       dispatch(addToPaste({ title, content }));
       setTitle("");
       setContent("");
-      toast("Paste Added! Scroll Down to View Pastes.", {
+      toast("Note Added! Scroll Down to View Pastes.", {
         style: {
           backgroundColor: "green",
           color: "white",
@@ -46,7 +46,7 @@ const homePage = () => {
 
   const handleDelete = () => {
     if (pastes.length == 0) {
-      toast("No Pastes to Delete", {
+      toast("No Notes to Delete", {
         style: {
           backgroundColor: "red",
           color: "white",
@@ -56,7 +56,7 @@ const homePage = () => {
       return;
     }
     dispatch(resetAllPastes());
-    toast("All Pastes Cleared!!!", {
+    toast("All Notes Cleared!!!", {
       style: {
         backgroundColor: "orange",
         color: "white",
@@ -66,7 +66,7 @@ const homePage = () => {
   };
 
   return (
-    <div className="[@media(max-width:700px)]:px-4 flex-grow flex flex-col  gap-2 bg-[#fff] items-center shadow-inner ">
+    <div className=" [@media(max-width:700px)]:px-4 flex-grow flex flex-col  gap-2 bg-[#fff] items-center shadow-inner pt-[69px] ">
       <div className="w-1/2 [@media(max-width:700px)]:w-full p-5 m-4 rounded-lg bg-[#131010]">
         <div className="flex flex-row justify-between h-[575px] rounded-lg gap-4">
           <div className="flex flex-col w-4/5 gap-1 bg-[#242322] p-3 rounded-md">

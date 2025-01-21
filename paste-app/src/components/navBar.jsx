@@ -3,7 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const navBar = () => {
   return (
-    <div className="flex justify-end bg-[#fff]  w-full items-center h-auto border-[#000] border-solid border-b-2 shadow-2xl ">
+    <div
+      className="fixed flex justify-end bg-[#fff]  w-full items-center h-auto shadow-sm"
+      onScroll={{}}
+    >
       <NavLink
         to="/"
         className="flex hover:text-[#fff] h-full p-4 items-center justify-center hover:bg-[#000] transition-all duration-200 prose-xl text-[#181C14]"

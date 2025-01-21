@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { updateToPaste, returnPaste } from "../redux-slices/PASTEslice";
+import { updateToPaste, returnPaste } from "../redux-slices/pasteSlice";
 import { useParams, useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
@@ -14,7 +14,14 @@ const viewPaste = (props) => {
   const handleUpdate = () => {
     if (pastes[id].title === title && pastes[id].content === content) {
       toast(
-        "Are you fucking stupid? Make a change to update or go to homepage."
+        "Are you fucking stupid? Make a change to update or go to homepage.",
+        {
+          style: {
+            backgroundColor: "gray",
+            color: "white",
+            fontFamily: "Ubuntu",
+          },
+        }
       );
       return;
     }
@@ -29,7 +36,7 @@ const viewPaste = (props) => {
   };
 
   return (
-    <div className="flex-grow flex flex-col h-auto gap-2 bg-[#fff] items-center">
+    <div className="pt-[69px] flex-grow flex flex-col h-auto gap-2 bg-[#fff] items-center">
       <div className="flex flex-row w-full justify-center h-[575px] p-4 rounded-lg gap-4">
         <div className="flex flex-col w-1/2 gap-1 bg-[#242322] p-3 rounded-lg">
           <input

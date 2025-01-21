@@ -3,7 +3,7 @@ import Home from "./components/homePage";
 import Pastes from "./components/pastesPage";
 import NavBar from "./components/navBar";
 import ViewPaste from "./components/viewPaste";
-import PasteCard from "./pasteCard/pasteCard";
+import PasteCard from "./components/pasteCard/pasteCard";
 import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter(
@@ -23,10 +23,10 @@ const router = createBrowserRouter(
     {
       path: "/pastes",
       element: (
-        <div>
+        <>
           <NavBar />
           <Pastes />
-        </div>
+        </>
       ),
     },
     {
